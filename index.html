@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<title>Face test</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">얼굴별 성격유형 테스트</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="section">
+		<h1 class="title">재미로 보는 남자 성격유형 테스트</h1>
+		<h2 class="subtitle">위 코드는 조코딩님의 영상을 참고해 제작되었습니다.</h2>
+	</section>
+	<section class="facebook">
+		<div class="container mt-5 facebook-cover d-flex flex-row-reverse">
+			<img src="img/facebook_logo.png" alt="facebook-icon" class="facebook-icon">
+			<a href="https://www.facebook.com/profile.php?id=100012537132925" class="facebook-link">개발자 페북</a>
+		</div>
+    </section>
+	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<div class="container file-upload">
+
+		<div class="image-upload-wrap" style="width: 65%; margin: 0 auto;">
+			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+			<div class="drag-text">
+				<img src="img/upload.svg" class="mt-5 pt-5 upload">
+				<h3 class="mb-5 pb-5 pt-4 upload-text">테스트할 사진을 선택해주세요</h3>
+			</div>
+		</div>
+		<div class="file-upload-content">
+			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+			<p class="result-message"></p>
+			<div id="label-container"></div>
+			<div class="image-title-wrap">
+				<button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button><span
+					class="image-title">Uploaded Image</span></button>
+			 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
+	         <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    
+	         <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">카카오톡</a>
+             <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+			 <script>
+			 function shareTwitter() {
+				var sendText = "얼굴별 성격 테스트"; // 전달할 텍스트
+				var sendUrl = "facetester.netlify.app"; // 전달할 URL
+				window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+			 }
+			 
+			 function shareFacebook() {
+               var sendUrl = "facetester.netlify.app"; // 전달할 URL
+               window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+             }
+             
+             function shareKakao() {
+ 
+             // 사용할 앱의 JavaScript 키 설정
+             Kakao.init('4699e6de497c8d708e879cefcb05016e');
+
+             // 카카오링크 버튼 생성
+             Kakao.Link.createDefaultButton({
+               container: '#btnKakao', // 카카오공유버튼ID
+               objectType: 'feed',
+               content: {
+	             title: "남자 얼굴별 성격유형 테스트", // 보여질 제목
+	             description: "facetest", // 보여질 설명
+	             imageUrl: "facetester.netlify.app", // 콘텐츠 URL
+	             link: {
+	    	        mobileWebUrl: "facetester.netlify.app",
+		            webUrl: "facetester.netlify.app"
+	             }
+               }
+             });
+          }
+			 </script>
+		</div>
+	</div>
+	<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-heTZheNgIgT7hJx3" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+	<footer class="footer pt-5 container d-flex justify-content-center">
+		<div>
+			<p>&copy; hackerJ facetest 2022. All Rights Reserved.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+	<script>
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					$('.image-upload-wrap').hide();
+					$('#loading').show();
+					$('.file-upload-image').attr('src', e.target.result);
+					$('.file-upload-content').show();
+					$('.image-title').html(input.files[0].name);
+				};
+
+				reader.readAsDataURL(input.files[0]);
+				init().then(() => {
+					console.log("hello");
+					predict();
+					$('#loading').hide();
+				});
+				// predict()
+			} else {
+				removeUpload();
+			}
+		}
+
+		function removeUpload() {
+			$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+			$('.file-upload-content').hide();
+			$('.image-upload-wrap').show();
+		}
+		$('.image-upload-wrap').bind('dragover', function () {
+			$('.image-upload-wrap').addClass('image-dropping');
+		});
+		$('.image-upload-wrap').bind('dragleave', function () {
+			$('.image-upload-wrap').removeClass('image-dropping');
+		});
+
+	</script>
+	<script type="text/javascript">
+		// More API functions here:
+		// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+		// the link to your model provided by Teachable Machine export panel
+		const URL = "https://teachablemachine.withgoogle.com/models/bN9Q6ylGY/";
+
+		let model, webcam, labelContainer, maxPredictions;
+
+		// Load the image model and setup the webcam
+		async function init() {
+			const modelURL = URL + "model.json";
+			const metadataURL = URL + "metadata.json";
+
+			// load the model and metadata
+			// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+			// or files from your local hard drive
+			// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+			model = await tmImage.load(modelURL, metadataURL);
+			maxPredictions = model.getTotalClasses();
+			labelContainer = document.getElementById("label-container");
+			for (let i = 0; i < maxPredictions; i++) { // and class labels
+				// labelContainer.appendChild(document.createElement("div"));
+				/* d-flex 클래스를 추가함으로써 결과화면에서 '~~상' 텍스트의 영역 제외한 오른쪽 나머지를 통계bar가 차지하는 것 같습니다 */
+				var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+			}
+		}
+		// run the webcam image through the image model
+		async function predict() {
+			console.log("predict 실행");
+			// predict can take in an image, video or canvas html element
+			var image = document.getElementById("face-image")
+			const prediction = await model.predict(image, false);
+			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+			console.log(prediction[0].className);
+			var resultMessage, resultExplain;
+			switch (prediction[0].className) {
+				case "귀염상":
+					resultMessage = "끼가 많고 대인관계가 활발한 당신은 귀염상!!"
+					/* 2) resultExplain에 값을 할당해주세요! */
+					resultExplain = "당신은 인싸 DNA99.9%의 사람!";
+					break;
+				case "모태솔로상":
+					resultMessage = "대인관계를 맺는것 것보단 혼자있는 걸 좋아하는 당신은 모태솔로상ㅠㅠ"
+					resultExplain = "개발자가 하고싶은말:어?? 이게 아닌데.. 다시 해볼래?"
+					break;
+				case "상남자상":
+					resultMessage = "뭐든지 한방에, '인생을 한방이다'라는 마인드로 사는 당신은 상남자상!!"
+					resultExplain = "의~리를 외치는 당신은 상남자";
+					break;
+				case "츤데레상":
+					resultMessage = "앞에선 차도남, 뒤에선 그누구보다 부드러운 당신은 츤데레상"
+					resultExplain = "오다 주었다";
+					break;
+				case "부드러운상":
+					resultMessage = "그 누구든지 잘 보듬어 줄 수있는 당신은 부드러운상!!"
+					resultExplain = "소심할수도 있지만 그누구보다 부드러운 당신";
+					break;
+				default: 알수없음
+
+			}
+
+			/* 1) 아래 title 값 할당에서 resultTitle이 아니라 resultMessage를 넘겨야 함 */
+			var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultMessage + "</div>"
+			var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+			$('.result-message').html(title + explain);
+			var barWidth;
+			for (let i = 0; i < maxPredictions; i++) {
+				if (prediction[i].probability.toFixed(2) > 0.1) {
+					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+					barWidth = "4%"
+				} else {
+					barWidth = "2%"
+				}
+				var labelTitle;
+				switch (prediction[i].className) {
+					case "귀염상":
+						labelTitle = "귀염상"
+						break;
+					case "모태솔로상":
+						labelTitle = "모태솔로상"
+						break;
+					case "부드러운상":
+						labelTitle = "부드러운상"
+						break;
+					case "상남자상":
+						labelTitle = "상남자상"
+						break;
+					case "츤데레상":
+						labelTitle = "츤데레상"
+						break;
+				}
+
+				/* 3) prediction[i].className용 클래스 css를 정의해야 합니다.
+				아래 bar에서는 조코딩 샘플 예제에서 사용하는 prediction[i].className중 하나인 'rabbit'으로 값을 바꾼 코드이며, 같이 보내드리는 style.css 파일에서 'rabbit-box', 'rabbit-bar' css를 추가한 상태입니다!  */
+				// prediction[i].className 
+				var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+				var bar = "<div class='bar-container position-relative container'><div class='" + "rabbit" + "-box'></div><div class='d-flex justify-content-center align-items-center " + "rabbit" + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+				labelContainer.childNodes[i].innerHTML = label + bar;
+			}
+		}
+	</script>
+</body>
+<!-- Copyright (c) 2022 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+
+</html>
