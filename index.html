@@ -81,10 +81,10 @@
 			<div class="image-title-wrap">
 				<button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button><span
 					class="image-title">Uploaded Image</span></button>
-	    <div class="sns-share"
-		 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
-	     <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    
-	     <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">카카오톡</a>
+	    <div class="sns-share">
+		 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터로 공유하기</a>
+	     <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북으로 공유하기</a>    
+	     <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">카카오톡으로 공유하기</a>
          <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 		 <script>
 		 function shareTwitter() {
@@ -101,7 +101,7 @@
          function shareKakao() {
  
          // 사용할 앱의 JavaScript 키 설정
-         Kakao.init('4699e6de497c8d708e879cefcb05016e');
+         Kakao.init('d7f6a2e8af1e6fdc06c6dd5006bd3d11');
 
          // 카카오링크 버튼 생성
          Kakao.Link.createDefaultButton({
@@ -119,6 +119,8 @@
          });
       }
 		 </script>
+	     </div>
+
 		</div>
 	</div>
 	<ins class="kakao_ad_area" style="display:none;" 
