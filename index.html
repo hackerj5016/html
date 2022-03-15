@@ -79,28 +79,14 @@
 			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
 			<p class="result-message"></p>
 			<div id="label-container"></div>
-			<div class="loader container d-flex justify-content-center"></div>
-	        <script>
-				var myVar;
-				
-				function myFunction() {
-				  myVar = setTimeout(showPage, console.log(prediction[0].className));
-				}
-				
-				function showPage() {
-				  document.getElementById("loader.container.d-flex.justify-content-center").style.display = "none";
-				  document.getElementById("image-title-wrap").style.display = "block";
-				}
-				</script>
 			<div class="image-title-wrap">
 				<button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button><span
 					class="image-title">Uploaded Image</span></button>
 	    <h1>           </h1>
-
 		<div class="sns-share">
-		 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();"></a>
-	     <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();"></a>    
-	     <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();"></a>
+		 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
+	     <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    
+	     <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">카카오톡</a>
          <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 		 <script>
 		 function shareTwitter() {
