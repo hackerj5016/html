@@ -240,6 +240,6 @@ body {
 	100% { transform: rotate(360deg); }
 }
 
-.footer pt-5 container d-flex justify-content-center {
-	color: rgb(55, 52, 52);
+a {
+	color: #333;
 }
