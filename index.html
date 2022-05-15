@@ -76,14 +76,20 @@
 				<h3 class="mb-5 pb-5 pt-4 upload-text">테스트할 사진을 선택해주세요</h3>
 			</div>
 		</div>
+	</div>
 		<div class="file-upload-content">
 			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
 			<p class="result-message"></p>
 			<div id="label-container"></div>
+			<div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only"></span></div></div>
+				</div>
 			<div class="image-title-wrap">
 				<button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button><span
-					class="image-title">Uploaded Image</span></button>
-	    <h1>           </h1>
+					class="image-title">Uploaded Image</span></button></div>
+		</div>
+	    <hr>
 		<div class="sns-share">
 		 <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
 	     <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>    

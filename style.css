@@ -42,6 +42,9 @@ body {
 	display: none;
 	text-align: center;
   }
+  #loading {
+	display: none;
+  }
   
   .file-upload-input {
 	position: absolute;
