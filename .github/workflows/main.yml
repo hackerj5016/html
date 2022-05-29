@@ -24,13 +24,13 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.OBOON_HOST }}
-        username: ${{ secrets.OBOON_USERNAME }}
-        password: ${{ secrets.OBOON_PASSWORD }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
         port: ${{ secrets.PORT }} # default : 22
         script: |
           su
           ${{ secrets.ROOT_PASSWORD }}
-          cd ${{ secrets.OBOON_WEB_PATH }} && git pull
+          cd ${{ secrets.SSH_WEB_PATH }} && git pull
           service nginx reload
  
