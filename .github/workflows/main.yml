@@ -27,9 +27,10 @@ jobs:
         host: ${{ secrets.OBOON_HOST }}
         username: ${{ secrets.OBOON_USERNAME }}
         password: ${{ secrets.OBOON_PASSWORD }}
-        # port: ${{ secrets.PORT }} # default : 22
+        port: ${{ secrets.PORT }} # default : 22
         script: |
+          su
+          ${{ secrets.ROOT_PASSWORD }}
           cd ${{ secrets.OBOON_WEB_PATH }} && git pull
-          npm install
-          npm run build
+          service nginx reload
  
