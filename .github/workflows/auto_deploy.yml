@@ -28,7 +28,7 @@ jobs:
             ${{ secrets.KEY }}
             cd /
             cd /var/www
-            git pull https://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@github.com/hackerj5016/html.git
+            git clone https://github.com/hackerj5016/html.git
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
