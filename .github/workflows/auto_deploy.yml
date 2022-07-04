@@ -24,8 +24,7 @@ jobs:
           password: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            su
-            ${{ secrets.KEY1 }}
+            sudo su
             cd /var/www
             git pull https://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@github.com/hackerj5016/html.git
       - name: send custom message with args
