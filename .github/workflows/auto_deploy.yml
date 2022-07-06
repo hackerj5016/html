@@ -25,14 +25,8 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo service nginx stop
-            cd /home/ubuntu/nginx/html/img
-            sudo rm -f *
-            cd ..
-            sudo rmdir img
-            cd /home/ubuntu/nginx/html
-            sudo rm -f *
-            cd ..
-            sudo rmdir html
+            cd /home/ubuntu/nginx/
+            rm -rf *
             sudo git clone https://github.com/hackerj5016/html.git
             sudo service nginx start
       - name: send custom message with args
