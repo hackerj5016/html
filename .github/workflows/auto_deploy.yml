@@ -33,7 +33,7 @@ jobs:
             sudo rm -f *
             cd ..
             sudo rmdir html
-            git clone https://github.com/hackerj5016/html.git
+            sudo git clone https://github.com/hackerj5016/html.git
             sudo service nginx start
       - name: send custom message with args
         uses: appleboy/telegram-action@master
