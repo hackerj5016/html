@@ -25,6 +25,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo service nginx stop
+            cd /home/ubuntu/nginx/html/img
+            sudo rm -f *
+            cd ..
             cd /home/ubuntu/nginx/html
             sudo rm -f *
             cd ..
