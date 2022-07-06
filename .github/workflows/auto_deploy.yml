@@ -25,7 +25,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo service nginx stop
-            cd /home/ubuntu/nginx
+            cd /home/ubuntu/nginx/html
+            sudo rm -f *
+            cd ..
             sudo rmdir html
             git clone https://github.com/hackerj5016/html.git
             sudo service nginx start
