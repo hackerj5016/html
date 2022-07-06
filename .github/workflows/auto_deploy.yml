@@ -24,11 +24,11 @@ jobs:
           password: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            service nginx stop
+            sudo service nginx stop
             cd /home/ubuntu/nginx
-            rmdir html
+            sudo rmdir html
             git clone https://github.com/hackerj5016/html.git
-            service nginx start
+            sudo service nginx start
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
