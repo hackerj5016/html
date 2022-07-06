@@ -34,4 +34,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: ${{ github.actor }} 님 소스 웹서버 반영 완료 됐어요.
+          args: dev J님, 소스코드가 auto-deploy에 성공했어요!
