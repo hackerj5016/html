@@ -28,6 +28,7 @@ jobs:
             cd /home/ubuntu/nginx/html/img
             sudo rm -f *
             cd ..
+            rmdir img
             cd /home/ubuntu/nginx/html
             sudo rm -f *
             cd ..
