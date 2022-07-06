@@ -26,7 +26,7 @@ jobs:
           script: |
             sudo service nginx stop
             cd /home/ubuntu/nginx/
-            rm -rf *
+            sudo rm -rf *
             sudo git clone https://github.com/hackerj5016/html.git
             sudo service nginx start
       - name: send custom message with args
